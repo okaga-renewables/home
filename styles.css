@@ -1,0 +1,124 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #276040;
+}
+
+
+.slider {
+    display: flex;
+    justify-content: center; /* Horizontally center the images */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1920px;
+    height: 56.25vw;
+}
+
+.slider img {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the images */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    justify-content: center; /* Horizontally center the images */
+    align-items: center;     /* Vertically center the images */
+}
+
+.slider img:first-child {
+    opacity: 1;
+}
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #295b42;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Added shadow for visibility */
+}
+
+.enquiry-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.enquiry-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.enquiry-form input[type="submit"] {
+    background-color: #295b42;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ... Your existing CSS ... */
+
+/* Adjusting Controls for Translucent Arrows */
+.controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure controls are above the images */
+}
+
+button {
+    background-color: transparent; /* Remove the background color */
+    color: white; /* Set the arrow color to white for visibility */
+    border: none;
+    font-size: 2rem; /* Increase the font size for better visibility */
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    opacity: 0.5; /* Make buttons translucent */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+
+button:hover {
+    opacity: 1; /* Fully opaque on hover */
+}
+
+/* Positioning the Previous Button to the Left */
+#prev {
+    position: absolute;
+    left: 10px;
+}
+
+/* Positioning the Next Button to the Right */
+#next {
+    position: absolute;
+    right: 10px;
+}
