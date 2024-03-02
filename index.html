@@ -22,13 +22,19 @@
     <div class="enquiry-form">
         <h2>Contact Us</h2>
         <p>Please fill out the form below and we'll get back to you as soon as possible.</p>
-        <form action="https://formsubmit.co/info@okagarenewables.com" method="post" target="hidden_iframe">
+        <form action="https://formsubmit.co/info@okagarenewables.com" method="post" target="hidden_iframe" onsubmit="confirmSubmission()">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="tel" name="tel" placeholder="Phone Number">
             <input type="text" name="query" placeholder="Additional Info" required>
             <input type="submit" value="Submit">
         </form>
+        <script>
+            function confirmSubmission() {
+                alert("Your form has been submitted. We'll get back to you soon!");
+            }
+        </script>
+
         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
     
